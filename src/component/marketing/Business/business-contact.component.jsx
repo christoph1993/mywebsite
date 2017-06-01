@@ -1,36 +1,35 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router';
 
-import {Button, Jumbotron, Grid, Row, Col, ControlLabel, Form, FormControl, FormGroup} from 'react-bootstrap';
-import ScrollableAnchor from 'react-scrollable-anchor';
+import {Button, Jumbotron, Grid, Row, Col, ControlLabel, Form, FormControl, FormGroup, Glyphicon} from 'react-bootstrap';
 
-class Business extends Component {
-    constructor(props) {
-        super(props);
-        this.state = {
 
-        }
-    }
-
+class BusinessContact extends Component {
     render() {
-        return (
+        return(
             <div>
-                <Jumbotron>
-                    <h1>Welcome to your companies website</h1>
-                    <p>A website to help promote your business and products</p>
-                    <Button href="#businessContact">Contact Us</Button>
-                </Jumbotron>
+                <Grid>
+                    <Row>
+                        <Col sm={8}>
+                            <h2>Like what we offer?</h2>
+                            <h4><strong>Feel free to contact us below for any inquiries you may have</strong></h4>
+                        </Col>
+                        <Col sm={4}>
+                            <Glyphicon glyph="envelope" className="logo"/>
+                        </Col>
+                    </Row>
+                </Grid>
 
                 <Grid>
-                    <ScrollableAnchor id="businessContact">
+                    <div>
                         <Row>
-                            <Col sm={3}>
+                            <Col sm={2}>
                                 <p>Let your customer know your passion and dedication to your business</p>
-                                <p><span class="glyphicon glyphicon-map-marker"></span>Business Location</p>
-                                <p><span class="glyphicon glyphicon-phone"></span>+99 1421132518</p>
-                                <p><span class="glyphicon glyphicon-envelope"></span>your@business.com</p>
+                                <p><Glyphicon glyph="map-marker" />Business Location</p>
+                                <p><Glyphicon glyph="phone" />+99 1421132518</p>
+                                <p><Glyphicon glyph="envelope" />your@business.com</p>
                             </Col>
-                            <Col sm={7}>
+                            <Col sm={6}>
                                 <Form horizontal>
                                     <FormGroup controlId="formhorizontalName">
                                         <Col componentClass={ControlLabel} sm={2}>
@@ -66,13 +65,11 @@ class Business extends Component {
                                 </Form>
                             </Col>
                         </Row>
-                    </ScrollableAnchor>
+                    </div>
                 </Grid>
-
             </div>
         );
     }
 }
 
-
-export default Business;
+export default BusinessContact;

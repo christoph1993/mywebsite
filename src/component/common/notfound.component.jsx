@@ -4,8 +4,10 @@ class NotFound extends Component {
     render() {
         return (
             <div>
-                <h1>Page Not Found</h1>
-                <p>This page was not found.<br/>Click <a href="/">here</a> to return home</p>
+                <div className="for-header">
+                    <h1>Page Not Found</h1>
+                    <p>This page was not found.<br/>Click <a href="/">here</a> to return home</p>
+                </div>
             </div>
         )
     }
